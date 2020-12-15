@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+.title-section {
+  // border: 1px solid;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  color: #ffffff;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4%;
+    padding-left: 5%;
+
+    label {
+      font-size: 4rem;
+      font-family: "Russo One", sans-serif;
+    }
+  }
+}
+
+// @media (max-width: 768px) {
+//   .title-section {
+//     width: 100vw;
+//     height: 30vh;
+//   }
+// }
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Small devices
+@mixin sm {
+  @media (max-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (max-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (max-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (max-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
